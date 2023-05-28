@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/ans_btn.dart';
+import 'package:quiz_app/widgets/ans_btn.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({Key? key}) : super(key: key);
+  final int currentQuesIndex;
+  final void Function(String) answerQuestion;
+
+  const QuestionsScreen(
+      {required this.currentQuesIndex,
+      required this.answerQuestion,
+      super.key});
 
   @override
   State<QuestionsScreen> createState() => _QuestionsScreenState();
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
-  var currentQuesIndex = 0;
-
-  void answerQuestion() {
-    setState(() {
-      currentQuesIndex++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    final currentQues = questions[currentQuesIndex];
+    final currentQues = questions[widget.currentQuesIndex];
     return Container(
       margin: const EdgeInsets.all(40),
       child: Column(
@@ -42,7 +40,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           ...currentQues.getShuffledAnswers().map((answer) {
             return AnsBtn(
               ansText: answer,
-              selectAns: answerQuestion,
+              selectAns: () {
+                widget.answerQuestion(answer);
+              },
             );
           }),
         ],
