@@ -3,12 +3,7 @@ import 'package:quiz_app/models/quiz_question.dart';
 const questions = [
   QuizQuestion(
     text: "Who is the president of India?",
-    answers: [
-      'Modi',
-      'Rahul',
-      'Murmu',
-      'Saurav',
-    ],
+    answers: ['Modi', 'Rahul', 'Murmu', 'Saurav', 'Ullu'],
     correctAns: 2,
   ),
   QuizQuestion(
