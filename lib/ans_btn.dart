@@ -18,7 +18,11 @@ class AnsBtn extends StatelessWidget {
         ),
       ),
       onPressed: selectAns,
-      child: Text(ansText),
+      child: Text(
+        ansText,
+        style: const TextStyle(fontSize: 18),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
