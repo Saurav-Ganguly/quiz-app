@@ -26,4 +26,45 @@ const questions = [
     ],
     correctAns: 2,
   ),
+  QuizQuestion(
+    text: "Who is the best friend of Saurav?",
+    answers: [
+      'Chitra',
+      'Boney',
+      'Moti',
+      'Guru',
+    ],
+    correctAns: 2,
+  ),
+  QuizQuestion(
+    text: "Who is the best friend of Saurav?",
+    answers: [
+      'Chitra',
+      'Boney',
+      'Moti',
+      'Guru',
+    ],
+    correctAns: 2,
+  ),
+  QuizQuestion(
+    text: "Who is the best friend of Saurav?",
+    answers: [
+      'Chitra',
+      'Boney',
+      'Moti',
+      'Guru',
+    ],
+    correctAns: 2,
+  ),
+  QuizQuestion(
+    text:
+        "Who is the best friend of Saurav? Who is the best friend of Saurav? Who is the best friend of Saurav?",
+    answers: [
+      'Chitra',
+      'Boney',
+      'Moti',
+      'Guru',
+    ],
+    correctAns: 2,
+  ),
 ];
